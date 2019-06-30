@@ -46,7 +46,7 @@ function clear () {
 }
 
 function storeNumber (button) {
-  if (numString === '' && numArray === '0') {
+  if (numString === '' && numArray.length === 0) {
     return
   } else if (numString === '') {
     numArray.length = numArray.length - 1
@@ -80,5 +80,6 @@ function calculate () {
 
   display.value = currentNumber
   numString = JSON.stringify(currentNumber)
+
   numArray = []
 }
