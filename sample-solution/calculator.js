@@ -26,7 +26,7 @@ function getButtonValue () {
 function number (button) {
   if (button === '.' && numString.includes('.')) {
     return
-  } else if (numString.charAt(0) === '0' && button === '0') {
+  } else if (numString.charAt(0) === '0' && numString.length === 1 && button === '0') {
     return
   } else {
     numString += button
