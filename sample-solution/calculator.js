@@ -77,7 +77,8 @@ function calculate () {
   if (currentNumber < 0) {
     currentNumber = Math.abs(currentNumber) + '-'
   }
+
   display.value = currentNumber
-  numString = currentNumber
+  numString = JSON.stringify(currentNumber)
   numArray = []
 }
