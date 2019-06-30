@@ -1,6 +1,7 @@
 var numString = ''
 var numArray = []
 let display = document.getElementById('display')
+let isPreviousResult = false
 
 listen()
 
@@ -29,6 +30,10 @@ function number (button) {
   } else if (numString.charAt(0) === '0' && numString.length === 1 && button === '0') {
     return
   } else {
+    if (isPreviousResult === true){
+      numString = ''
+      isPreviousResult = false
+    }
     numString += button
     display.value = numString
   }
@@ -80,6 +85,6 @@ function calculate () {
 
   display.value = currentNumber
   numString = JSON.stringify(currentNumber)
-
+  isPreviousResult = true
   numArray = []
 }
