@@ -1,6 +1,7 @@
 var numString = ''
 var numArray = []
 let display = document.getElementById('display')
+let isPreviousResult = false
 
 listen()
 
@@ -26,9 +27,13 @@ function getButtonValue () {
 function number (button) {
   if (button === '.' && numString.includes('.')) {
     return
-  } else if (numString.charAt(0) === '0' && button === '0') {
+  } else if (numString.charAt(0) === '0' && numString.length === 1 && button === '0') {
     return
   } else {
+    if (isPreviousResult === true){
+      numString = ''
+      isPreviousResult = false
+    }
     numString += button
     display.value = numString
   }
@@ -46,7 +51,7 @@ function clear () {
 }
 
 function storeNumber (button) {
-  if (numString === '' && numArray === '0') {
+  if (numString === '' && numArray.length === 0) {
     return
   } else if (numString === '') {
     numArray.length = numArray.length - 1
@@ -77,7 +82,9 @@ function calculate () {
   if (currentNumber < 0) {
     currentNumber = Math.abs(currentNumber) + '-'
   }
+
   display.value = currentNumber
-  numString = currentNumber
+  numString = JSON.stringify(currentNumber)
+  isPreviousResult = true
   numArray = []
 }
