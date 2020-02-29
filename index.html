@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="cover">
+        <div class="frontCamera"></div>
+        <div class="phoneSpeaker"></div>
+        <div class="home"></div>
+        <div class="container">
+            <table>
+                <tr>
+                    <!-- This is a 'blank space' here by pressing option + space -->
+                    <td colspan="4" class="previousLabel" data-previous-input> </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="currentLabel" data-current-input>0</td>
+                </tr>
+                <tr>
+                    <td><button class="funcBtn" data-allclear type="button">AC</button></td>
+                    <td><button class="funcBtn" data-method id="plusmn" type="button">±</button></td>
+                    <td><button class="funcBtn" data-method type="button" data-operation>%</button></td>
+                    <td><button class="methodBtn" data-method id="divide" type="button">÷</button></td>
+                </tr>
+                <tr>
+                    <td><button class="numBtn" data-number type="button">7</button></td>
+                    <td><button class="numBtn" data-number type="button">8</button></td>
+                    <td><button class="numBtn" data-number type="button">9</button></td>
+                    <td><button class="methodBtn" data-method id="multiple" type="button">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="numBtn" data-number type="button">4</button></td>
+                    <td><button class="numBtn" data-number type="button">5</button></td>
+                    <td><button class="numBtn" data-number type="button">6</button></td>
+                    <td><button class="methodBtn" data-method type="button">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="numBtn" data-number type="button">1</button></td>
+                    <td><button class="numBtn" data-number type="button">2</button></td>
+                    <td><button class="numBtn" data-number type="button">3</button></td>
+                    <td><button class="methodBtn" data-method type="button">+</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="numBtn" data-number id="button0" type="button" onclick="pushBtn(this)">0</button></td>
+                    <td><button class="numBtn" data-number type="button">.</button></td>
+                    <td><button class="methodBtn" data-equals type="button">=</button></td>
+                </tr>
+            </table> 
+        </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
