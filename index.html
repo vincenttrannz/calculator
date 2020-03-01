@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../styles/style.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Calculator</title>
 </head>
 <body>
+    <nav class="navi">
+        <div class="tab">
+            <button type="button"><a href="../index.html">Home</a></button>
+            <button type="button"><a href=".html">Contact</a></button>
+            <button type="button" onclick="clickToToggleNavi()">Other Sprint</button>
+        </div>
+        <div class="hidden">
+            <a href="../blog/sprint1-cultural.html">Sprint 1 Culture</a><br>
+            <a href="../blog/sprint1-technical.html">Sprint 1 Technical</a><br>
+            <a href="../blog/sprint2-cultural.html">Sprint 2 Culture</a><br>
+            <a href="../blog/sprint2-technical.html">Sprint 2 Technical</a><br>
+            <a href="../blog/sprint3-cultural.html">Sprint 3 Culture</a><br>
+            <a href="../blog/sprint3-technical.html">Sprint 3 Technical</a><br>
+            <a href="../blog/sprint4-cultural.html">Sprint 4 Cultural</a>
+        </div>
+    </nav>
     <div class="cover">
         <div class="frontCamera"></div>
         <div class="phoneSpeaker"></div>
@@ -54,5 +72,38 @@
         </div>
     </div>
     <script src="script.js" type="text/javascript"></script>
+    <footer>
+        <p>Copyright © by Vincent Tran </p>
+        <div class="note">
+            <p><strong>NOTE</strong></p>
+            <p>Most of these issues are still under developing, sorry for inconvenience</p>
+            <ul>
+                <li>
+                    <p>Equal button:</p>
+                    <p>
+                        When passing the equal button to get computation, 
+                        the calculator will be cleared. You can start pressing new
+                        number, but it will not take the previous result to take further
+                        calculate method. If you try to press any calculate method, it will
+                        only append 0 (zero) to your choosing method.
+                    </p>
+                </li>
+                <li>
+                    <p>Plus/Minus Button</p>
+                    <p>
+                        When pressing Plus/Minus button, you will be brought back to the clear
+                        state of the calculator. It will ask you to pass a number in order to get
+                        its minus value.
+                    </p>
+                </li>
+                <li>
+                    <p>Percentage Button</p>
+                    <p>
+                        Same issue with Plus/Minus button
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

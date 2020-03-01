@@ -2,10 +2,11 @@
     font-family: 'Roboto', ;
 }
 body{
-    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     background-image: linear-gradient(to right, rgb(61, 61, 61), gainsboro);
 }
-
 /* IPHONE COVER */
 .cover{
     text-align: left;
@@ -135,4 +136,30 @@ body{
 }
 .methodBtn:focus{
     outline: none;
+}
+
+/* FOOTER */
+footer{
+    color: ghostwhite;
+    text-align: center;
+}
+
+/* NOTE */
+.note{
+    border: outset 3px;
+    color: black;
+    background-color: gainsboro;
+    border-radius: 10px;
+    text-align: justify;
+    text-align-last: left;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+/* MEDIA QUERIES */
+/* Iphone 7, 7plus, 8, 8plus */
+@media screen and (max-width: 736px){
+    .frontCamera{
+        margin-left: -10px;
+    }
 }
