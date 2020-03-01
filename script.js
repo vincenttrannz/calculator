@@ -19,10 +19,6 @@ class Calculator {
         this.method = undefined
     }
 
-    halfClear(){
-        this.currentLabel = previousInputLabelTextElement.innerText;
-    }
-
     appendNumber(number) {
         if (number === '.' && this.currentLabel.includes('.')) return
         this.currentLabel = this.currentLabel.toString() + number.toString();
@@ -106,6 +102,22 @@ class Calculator {
         } else {
             this.previousInputLabelTextElement.innerText = ' '
         }
+    }
+
+    halfClear(){
+        debugger;
+        if(this.previousInputLabelTextElement.innerText != ''){
+            this.previousLabel = this.currentInputLabelTextElement.innerText;
+        }
+        this.previousInputLabelTextElement.innerText = 'Calculator is now cleared'
+        this.clear()
+        // } 
+        // if(this.previousLabel = this.currentInputLabelTextElement.innerText){
+        // this.currentLabel = this.previousLabel + this.method;
+        // }
+        // if(this.currentLabel != undefined){
+        //     this.currentLabel = this.currentInputLabelTextElement.innerText + this.method;
+        // }
     }
 }
 
